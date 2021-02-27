@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import Header from "./components/Header";
+import Content from "./components/Content";
+import Footer from "./components/Footer";
 
 function App() {
+  const [balance, setbalance] = useState(
+    (Math.round(100.0 * 100) / 100).toFixed(2)
+  );
+
+  const changeBalance = (n) =>
+    setbalance((Math.round(n * 100) / 100).toFixed(2));
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header balance={balance} onChange={changeBalance} />
+      <Content />
+      <Footer />
     </div>
   );
 }

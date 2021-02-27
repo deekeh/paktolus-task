@@ -1,0 +1,45 @@
+.navbar {
+  background-color: #000000;
+  color: #eaeaea;
+  /* padding: 5px; */
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+}
+
+.navbar > .nav-logo > .nav-logo-text {
+  font-size: 2.5rem;
+}
+
+.navbar > .nav-menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 200px;
+  min-width: 200px;
+}
+
+.navbar > .nav-menu > .nav-menu-item > #balance {
+  background-color: #303030;
+  padding: 10px 15px;
+}
+
+.my-btn {
+  border: 0;
+  padding: 10px 15px;
+  font-size: 1.1rem;
+}
+.my-btn:hover {
+  cursor: pointer;
+}
+
+.my-btn-dark {
+  background-color: #191919;
+  color: #eaeaea;
+}
+.my-btn-dark:hover {
+  background-color: #222222;
+}
