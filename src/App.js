@@ -9,15 +9,15 @@ import Footer from "./components/Footer";
 
 function App() {
   const [balance, setbalance] = useState(
-    (Math.round(100.0 * 100) / 100).toFixed(2)
+    (Math.round(100 * 100) / 100).toFixed(2)
   );
 
   const changeBalance = (n) =>
-    setbalance((Math.round(n * 100) / 100).toFixed(2));
+    setbalance((Math.round((Number(balance) + n) * 100) / 100).toFixed(2));
   return (
     <div className="App">
       <Header balance={balance} onChange={changeBalance} />
-      <Content />
+      <Content changeBalance={changeBalance} />
       <Footer />
     </div>
   );

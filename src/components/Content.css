@@ -2,3 +2,19 @@
   /* height: 90vh; */
   min-height: 90vh;
 }
+
+.slots {
+  height: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.slots > .slot-item {
+  height: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 3rem;
+}
