@@ -43,3 +43,8 @@
 .my-btn-dark:hover {
   background-color: #222222;
 }
+
+#login-avatar:hover {
+  background-color: #303030;
+  cursor: pointer;
+}
