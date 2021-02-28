@@ -39,6 +39,7 @@ const Content = (props) => {
       [s1, s3].indexOf(s2) !== -1
     )
       props.changeBalance(0.5);
+    localStorage.setItem("balance", props.balance);
     let date = new Date();
     const playDate = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
     addGame({

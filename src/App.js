@@ -8,8 +8,8 @@ import Content from "./components/Content";
 import Footer from "./components/Footer";
 
 function App() {
-  localStorage.getItem("username", "");
-  localStorage.getItem("balance", (Math.round(100 * 100) / 100).toFixed(2));
+  localStorage.setItem("username", "");
+  localStorage.setItem("balance", (Math.round(100 * 100) / 100).toFixed(2));
   const [balance, setbalance] = useState(
     (Math.round(100 * 100) / 100).toFixed(2)
   );
@@ -19,7 +19,7 @@ function App() {
   return (
     <div className="App">
       <Header balance={balance} onChange={changeBalance} />
-      <Content changeBalance={changeBalance} />
+      <Content changeBalance={changeBalance} balance={balance} />
       <Footer />
     </div>
   );
