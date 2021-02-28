@@ -30,6 +30,7 @@ const Content = (props) => {
     if (debug) [s1, s2, s3] = [7, 7, 7];
     setSlotsData([s1, s2, s3]);
 
+    // give award based on slot numbers
     if (s1 === s2 && s2 === s3 && s1 === s3 && s1 === 7)
       props.changeBalance(10);
     else if (s1 === s2 && s2 === s3 && s3 === s1) props.changeBalance(5);
@@ -39,7 +40,8 @@ const Content = (props) => {
       [s1, s3].indexOf(s2) !== -1
     )
       props.changeBalance(0.5);
-    localStorage.setItem("balance", props.balance);
+
+    // generate current date and create append new object
     let date = new Date();
     const playDate = `${date.getDate()}/${date.getMonth()}/${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
     addGame({

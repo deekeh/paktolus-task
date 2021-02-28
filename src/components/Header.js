@@ -13,13 +13,14 @@ const Header = (props) => {
   const login = (e) => {
     e.preventDefault();
     localStorage.setItem("username", e.target.username.value);
+    props.onUserChange(e.target.username.value);
+    console.log(e.target.username.value);
     localStorage.setItem("balance", props.balance);
     setLoggedIn(true);
   };
 
   const logout = () => {
-    localStorage.removeItem("username");
-    localStorage.removeItem("balance");
+    props.deleteData();
     setLoggedIn(false);
   };
   return (
