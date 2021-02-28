@@ -31,7 +31,9 @@
 
 @media screen and (max-width: 1020px) {
   #footer {
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-flow: column-reverse;
+    font-size: 0.8rem;
   }
 
   #footer > #footer-links {
