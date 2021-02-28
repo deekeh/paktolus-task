@@ -20,10 +20,13 @@ function App() {
   const changeUser = (u) => setUsername(u);
 
   // initialise user, balance on page-load
-  // useEffect(() => {
-  //   localStorage.setItem("username", username);
-  //   localStorage.setItem("balance", balance);
-  // }, []);
+  useEffect(() => {
+    let localBalance = localStorage.getItem("balance");
+    let localUsername = localStorage.getItem("username");
+    if (localBalance) setbalance(localBalance);
+    if (localUsername !== null || localUsername !== "")
+      setUsername(localUsername);
+  }, []);
   useEffect(() => {
     localStorage.setItem("balance", balance);
     localStorage.setItem("username", username);

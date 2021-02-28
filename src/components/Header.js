@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   OverlayTrigger,
   Popover,
@@ -10,6 +10,10 @@ import "./Header.css";
 
 const Header = (props) => {
   const [loggedIn, setLoggedIn] = useState(false);
+  useEffect(() => {
+    let localUsername = localStorage.getItem("username");
+    if (localUsername) setLoggedIn(true);
+  }, []);
   const login = (e) => {
     e.preventDefault();
     localStorage.setItem("username", e.target.username.value);
