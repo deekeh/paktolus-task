@@ -24,8 +24,7 @@ function App() {
     let localBalance = localStorage.getItem("balance");
     let localUsername = localStorage.getItem("username");
     if (localBalance) setbalance(localBalance);
-    if (localUsername !== null || localUsername !== "")
-      setUsername(localUsername);
+    if (localUsername) setUsername(localUsername);
   }, []);
   useEffect(() => {
     localStorage.setItem("balance", balance);
