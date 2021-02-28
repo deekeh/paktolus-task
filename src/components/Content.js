@@ -40,6 +40,7 @@ const Content = (props) => {
       [s1, s3].indexOf(s2) !== -1
     )
       props.changeBalance(0.5);
+    else props.changeBalance(-1);
 
     // generate current date and create append new object
     let date = new Date();
