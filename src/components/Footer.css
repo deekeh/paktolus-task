@@ -3,6 +3,9 @@
   color: #333;
   /* height: 60px; */
   min-height: 60px;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
 
   display: flex;
   flex-basis: row wrap;
